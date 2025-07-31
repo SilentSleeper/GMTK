@@ -5,7 +5,7 @@
 
 [node name="Local_Map" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Texture_rect" type="TextureRect" parent="."]
 offset_right = 320.0
 offset_bottom = 180.0
 texture = ExtResource("1_ulrls")

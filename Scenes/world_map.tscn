@@ -21,4 +21,3 @@ texture = ExtResource("1_rvr0e")
 
 [node name="Forest" parent="." instance=ExtResource("2_b7gke")]
 position = Vector2(281, 112)
-targetScene = "res://Scenes/local_map.tscn"

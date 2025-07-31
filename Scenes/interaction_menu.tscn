@@ -1,0 +1,71 @@
+[gd_scene load_steps=3 format=3 uid="uid://da7d7opge3p6r"]
+
+[ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="1_6kyp7"]
+[ext_resource type="PackedScene" uid="uid://dujvy8hg14ovn" path="res://Scenes/scene_button.tscn" id="2_r082r"]
+
+[node name="InteractionMenu" type="Node2D"]
+editor_description = "Appears after interacting with an object or location in the Local View map mode."
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_6kyp7")
+
+[node name="back_button" parent="." instance=ExtResource("2_r082r")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 128.0
+offset_top = 144.0
+offset_right = 192.0
+offset_bottom = 168.0
+grow_horizontal = 1
+grow_vertical = 1
+TargetScene = "res://Scenes/world_map.tscn"
+
+[node name="Button" parent="." instance=ExtResource("2_r082r")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 48.0
+offset_top = 16.0
+offset_right = 136.0
+offset_bottom = 64.0
+grow_horizontal = 1
+grow_vertical = 1
+TargetScene = "res://Scenes/world_map.tscn"
+
+[node name="Button2" parent="." instance=ExtResource("2_r082r")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 48.0
+offset_top = 80.0
+offset_right = 136.0
+offset_bottom = 128.0
+grow_horizontal = 1
+grow_vertical = 1
+TargetScene = "res://Scenes/world_map.tscn"
+
+[node name="Button3" parent="." instance=ExtResource("2_r082r")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 184.0
+offset_top = 16.0
+offset_right = 272.0
+offset_bottom = 64.0
+grow_horizontal = 1
+grow_vertical = 1
+TargetScene = "res://Scenes/conversation_menu.tscn"
+
+[node name="Button4" parent="." instance=ExtResource("2_r082r")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 184.0
+offset_top = 80.0
+offset_right = 272.0
+offset_bottom = 128.0
+grow_horizontal = 1
+grow_vertical = 1
+TargetScene = "res://Scenes/world_map.tscn"
