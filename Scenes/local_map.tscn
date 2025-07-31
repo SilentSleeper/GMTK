@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://iyilf4mcc5wj"]
+
+[ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="1_ulrls"]
+[ext_resource type="PackedScene" uid="uid://cnd2artnafrx6" path="res://Scenes/castle.tscn" id="2_bwvs6"]
+
+[node name="Local_Map" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("1_ulrls")
+
+[node name="Castle" parent="." instance=ExtResource("2_bwvs6")]
+position = Vector2(43, 34)
