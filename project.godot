@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="GMTK"
-run/main_scene="uid://bode5pr4k8xas"
+run/main_scene="uid://bign6s0yl7gt3"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [display]
@@ -22,7 +22,6 @@ window/size/window_width_override=1920
 window/size/window_height_override=1080
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
-window/vsync/vsync_mode=0
 
 [rendering]
 
