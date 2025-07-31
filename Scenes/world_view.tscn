@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bode5pr4k8xas"]
+
+[ext_resource type="Texture2D" uid="uid://buh1bksky8t4k" path="res://Assets/gmtk-ideamap.png" id="1_aixeq"]
+[ext_resource type="PackedScene" uid="uid://0rn6rcbyeddp" path="res://Scenes/Location.tscn" id="3_3ege8"]
+
+[node name="WorldView" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("1_aixeq")
+
+[node name="LocationsClamp" type="Node2D" parent="."]
+
+[node name="Kingdom" parent="LocationsClamp" instance=ExtResource("3_3ege8")]
+position = Vector2(285, 151)
+LocationName = "Kingdom"
+Sprite = "C:/Users/Alex/Desktop/Godot/gmtk-gamejam/Assets/Castle.png"
