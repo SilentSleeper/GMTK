@@ -12,3 +12,4 @@ texture = ExtResource("1_rvr0e")
 
 [node name="Forest" parent="." instance=ExtResource("2_b7gke")]
 position = Vector2(276, 92)
+description = "The forest"

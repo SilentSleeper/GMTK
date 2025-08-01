@@ -7,6 +7,8 @@
 size = Vector2(65, 59)
 
 [node name="Castle" instance=ExtResource("1_r1mkv")]
+description = "The Castle"
+targetScene = "uid://da7d7opge3p6r"
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2(0.5, 3.5)
