@@ -1,6 +1,6 @@
 extends Area2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@export var targetScene: String
+@export_file("*.tscn") var targetScene = "<Select target>"
 
 func _ready() -> void:
 	mouse_entered.connect(_on_mouse_entered)

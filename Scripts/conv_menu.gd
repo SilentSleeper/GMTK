@@ -1,7 +1,7 @@
 extends Node2D
 @onready var richTextLabel: RichTextLabel = $RichTextLabel
 @onready var vBoxContainer: VBoxContainer = $VBoxContainer
-
+@export_file var TargetCharacter = "<Select target>"
 var IsTalking: bool
 
 # visibility needs to be applied in ready and process, to make sure text doesn't flash on
