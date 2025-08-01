@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c27aw3b70omj3"]
+[gd_scene load_steps=6 format=3 uid="uid://c27aw3b70omj3"]
 
 [ext_resource type="Script" uid="uid://do8ef6tvqgrcj" path="res://Scripts/location_clickable.gd" id="1_uee5o"]
+[ext_resource type="PackedScene" uid="uid://bnds07vngyg4e" path="res://Scenes/text_box.tscn" id="2_22f0b"]
 
 [sub_resource type="Animation" id="Animation_8hnfc"]
 length = 0.001
@@ -50,3 +51,5 @@ script = ExtResource("1_uee5o")
 libraries = {
 &"": SubResource("AnimationLibrary_5ip0q")
 }
+
+[node name="Text_Box" parent="." instance=ExtResource("2_22f0b")]

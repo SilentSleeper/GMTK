@@ -11,4 +11,4 @@ offset_bottom = 180.0
 texture = ExtResource("1_rvr0e")
 
 [node name="Forest" parent="." instance=ExtResource("2_b7gke")]
-position = Vector2(276, 110)
+position = Vector2(276, 92)
