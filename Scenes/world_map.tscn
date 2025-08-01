@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bign6s0yl7gt3"]
+[gd_scene load_steps=4 format=3 uid="uid://bign6s0yl7gt3"]
 
 [ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="1_rvr0e"]
 [ext_resource type="PackedScene" uid="uid://dd0cowapkq8uw" path="res://Scenes/forest.tscn" id="2_b7gke"]
+[ext_resource type="PackedScene" uid="uid://cnd2artnafrx6" path="res://Scenes/castle.tscn" id="3_llh6y"]
 
 [node name="World_Map" type="Node2D"]
 
@@ -13,3 +14,6 @@ texture = ExtResource("1_rvr0e")
 [node name="Forest" parent="." instance=ExtResource("2_b7gke")]
 position = Vector2(276, 92)
 description = "The forest"
+
+[node name="Castle" parent="." instance=ExtResource("3_llh6y")]
+position = Vector2(38, 32)

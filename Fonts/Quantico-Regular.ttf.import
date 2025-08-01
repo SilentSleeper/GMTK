@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cxb3sgtr62j0s"
-path="res://.godot/imported/Born2bSportyV2.ttf-4d67c2b86e91c1c88a7619feba86fcbf.fontdata"
+uid="uid://dp1u7bgtfwt3q"
+path="res://.godot/imported/Quantico-Regular.ttf-ccf605eb49ec44160b217b95a04e7a72.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Born2bSportyV2.ttf"
-dest_files=["res://.godot/imported/Born2bSportyV2.ttf-4d67c2b86e91c1c88a7619feba86fcbf.fontdata"]
+source_file="res://Fonts/Quantico-Regular.ttf"
+dest_files=["res://.godot/imported/Quantico-Regular.ttf-ccf605eb49ec44160b217b95a04e7a72.fontdata"]
 
 [params]
 
@@ -16,7 +16,7 @@ Rendering=null
 antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
@@ -33,8 +33,7 @@ preload=[{
 "chars": [],
 "glyphs": [],
 "name": "New Configuration",
-"size": Vector2i(16, 0),
-&"variation_embolden": 0.0
+"size": Vector2i(16, 0)
 }]
 language_support={}
 script_support={}

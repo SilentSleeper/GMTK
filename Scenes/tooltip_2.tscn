@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnds07vngyg4e"]
+[gd_scene load_steps=9 format=3 uid="uid://c2s7al0ocjqoc"]
 
-[ext_resource type="Script" uid="uid://d4lymvypyqaql" path="res://Scripts/text_box.gd" id="1_ot2p7"]
-[ext_resource type="FontFile" uid="uid://daoxlemdr3mlr" path="res://Fonts/BetterPixels.ttf" id="2_0kxgl"]
-[ext_resource type="FontFile" uid="uid://cmtks3r8mym8i" path="res://Fonts/PixelMasterBold.ttf" id="2_ot2p7"]
+[ext_resource type="Script" uid="uid://7mg3y2n8x1bh" path="res://Scripts/tooltip_2.gd" id="1_bxr8d"]
+[ext_resource type="FontFile" uid="uid://daoxlemdr3mlr" path="res://Fonts/BetterPixels.ttf" id="2_46toj"]
+[ext_resource type="FontFile" uid="uid://b8sy4c575mtef" path="res://Fonts/BoldLCD.ttf" id="2_s7k51"]
+[ext_resource type="FontFile" uid="uid://cmtks3r8mym8i" path="res://Fonts/PixelMasterBold.ttf" id="3_s7k51"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kxgl"]
 bg_color = Color(0, 0, 0, 1)
@@ -44,21 +45,18 @@ _data = {
 &"RESET": SubResource("Animation_ot2p7")
 }
 
-[node name="Text_Box" type="CanvasLayer"]
-script = ExtResource("1_ot2p7")
+[node name="Tooltip2" type="CanvasLayer"]
+script = ExtResource("1_bxr8d")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 
 [node name="TextBoxContainer" type="MarginContainer" parent="Sprite2D"]
 anchors_preset = -1
-anchor_left = 32.0
-anchor_top = 150.0
-anchor_right = 32.0
-anchor_bottom = 150.0
-offset_right = 288.0
-offset_bottom = 30.0
+anchor_right = 26.0
+anchor_bottom = 1.0
+offset_right = 94.0
+offset_bottom = 64.0
 grow_vertical = 2
-pivot_offset = Vector2(144, 0)
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="Sprite2D/TextBoxContainer"]
@@ -72,43 +70,34 @@ theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/TextBoxContainer/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Sprite2D/TextBoxContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer"]
+[node name="Start" type="RichTextLabel" parent="Sprite2D/TextBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(7, 0)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme_override_fonts/font = ExtResource("2_0kxgl")
-text = "*"
-visible_characters = 0
-visible_ratio = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("2_s7k51")
+text = "Ceva"
+scroll_active = false
+autowrap_mode = 2
+justification_flags = 0
 
-[node name="Label" type="RichTextLabel" parent="Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="Sprite2D/TextBoxContainer/MarginContainer/VBoxContainer"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
-size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.8
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_constants/line_separation = -3
-theme_override_fonts/normal_font = ExtResource("2_0kxgl")
-theme_override_fonts/bold_font = ExtResource("2_ot2p7")
+theme_override_fonts/normal_font = ExtResource("2_46toj")
+theme_override_fonts/bold_font = ExtResource("3_s7k51")
 bbcode_enabled = true
 text = "Placeholder text for when we bing the heck out of the game jam"
 scroll_active = false
 justification_flags = 0
-visible_characters = 0
-visible_ratio = 0.0
-
-[node name="End" type="Label" parent="Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(7, 0)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_fonts/font = ExtResource("2_0kxgl")
-text = "V"
-visible_characters = 0
-visible_ratio = 0.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

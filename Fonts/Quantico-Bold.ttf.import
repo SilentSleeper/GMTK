@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cxb3sgtr62j0s"
-path="res://.godot/imported/Born2bSportyV2.ttf-4d67c2b86e91c1c88a7619feba86fcbf.fontdata"
+uid="uid://dbau2atsr8iwy"
+path="res://.godot/imported/Quantico-Bold.ttf-1b9bd4658000c2b47e3942c04e9db150.fontdata"
 
 [deps]
 
-source_file="res://Fonts/Born2bSportyV2.ttf"
-dest_files=["res://.godot/imported/Born2bSportyV2.ttf-4d67c2b86e91c1c88a7619feba86fcbf.fontdata"]
+source_file="res://Fonts/Quantico-Bold.ttf"
+dest_files=["res://.godot/imported/Quantico-Bold.ttf-1b9bd4658000c2b47e3942c04e9db150.fontdata"]
 
 [params]
 
@@ -29,13 +29,7 @@ Fallbacks=null
 fallbacks=[]
 Compress=null
 compress=true
-preload=[{
-"chars": [],
-"glyphs": [],
-"name": "New Configuration",
-"size": Vector2i(16, 0),
-&"variation_embolden": 0.0
-}]
+preload=[]
 language_support={}
 script_support={}
 opentype_features={}

@@ -11,15 +11,17 @@ func _ready() -> void:
 	input_event.connect(_input_event)
 	
 func _on_mouse_entered():
+	isInside = true
 	animationPlayer.play("scaleAnim")
 	textBox.add_text(description)
-	isInside = true
+	
 	
 func _on_mouse_exited():
+	isInside = false
 	animationPlayer.play_backwards("scaleAnim")
 	textBox.hide_container()
-	move_down()
-	isInside = false
+	#move_down()
+	
 	
 func change_scene(target: String, viewport: Node):
 	viewport.get_tree().change_scene_to_file(target)
