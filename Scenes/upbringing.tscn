@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1jbesd0tn4rp"]
+
+[ext_resource type="PackedScene" uid="uid://dsfrhu6rn7sdc" path="res://Scenes/hoverable.tscn" id="1_nlr3f"]
+[ext_resource type="Texture2D" uid="uid://dnec1160dm35i" path="res://Assets/Recct.png" id="2_iqrpw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlr3f"]
+size = Vector2(16, 16)
+
+[node name="Upbringing" instance=ExtResource("1_nlr3f")]
+description = "Description of Upbringing passive"
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_nlr3f")
+
+[node name="Passive_Texture" parent="." index="1"]
+texture = ExtResource("2_iqrpw")

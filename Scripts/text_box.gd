@@ -18,6 +18,7 @@ func hide_container():
 	
 func show_container():
 	start.text = "*"
+	end.text = "v"
 	text_box_container.show()
 	animation_player.play("Apearring")
 	
