@@ -14,7 +14,7 @@ func _on_mouse_exited():
 	animation_player.play_backwards("scaleAnim")
 	
 func change_scene(target: String, viewport: Node):
-	viewport.get_tree().change_scene_to_file(targetScene)
+	viewport.get_tree().change_scene_to_file(target)
 
 func _input_event(viewport: Node, event: InputEvent, _shape_idx: int):
 	if event is InputEventMouseButton and event.pressed:
