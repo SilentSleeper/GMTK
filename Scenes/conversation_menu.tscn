@@ -7,8 +7,9 @@
 editor_description = "Conversation menu - appears after pressing \"Talk\" or similar in the interaction menu."
 script = ExtResource("1_w57kf")
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(160, 90)
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
 texture = ExtResource("2_ejib7")
 
 [node name="Character_portrait" type="Sprite2D" parent="."]

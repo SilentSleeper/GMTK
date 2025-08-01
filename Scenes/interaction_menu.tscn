@@ -6,11 +6,14 @@
 [node name="InteractionMenu" type="Node2D"]
 editor_description = "Appears after interacting with an object or location in the Local View map mode."
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(160, 90)
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
 texture = ExtResource("1_6kyp7")
 
-[node name="back_button" parent="." instance=ExtResource("2_r082r")]
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="back_button" parent="Buttons" instance=ExtResource("2_r082r")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -20,9 +23,8 @@ offset_right = 192.0
 offset_bottom = 168.0
 grow_horizontal = 1
 grow_vertical = 1
-TargetScene = "res://Scenes/world_map.tscn"
 
-[node name="Button" parent="." instance=ExtResource("2_r082r")]
+[node name="Button" parent="Buttons" instance=ExtResource("2_r082r")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -32,9 +34,8 @@ offset_right = 136.0
 offset_bottom = 64.0
 grow_horizontal = 1
 grow_vertical = 1
-TargetScene = "res://Scenes/world_map.tscn"
 
-[node name="Button2" parent="." instance=ExtResource("2_r082r")]
+[node name="Button2" parent="Buttons" instance=ExtResource("2_r082r")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -44,9 +45,8 @@ offset_right = 136.0
 offset_bottom = 128.0
 grow_horizontal = 1
 grow_vertical = 1
-TargetScene = "res://Scenes/world_map.tscn"
 
-[node name="Button3" parent="." instance=ExtResource("2_r082r")]
+[node name="Button3" parent="Buttons" instance=ExtResource("2_r082r")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -56,9 +56,8 @@ offset_right = 272.0
 offset_bottom = 64.0
 grow_horizontal = 1
 grow_vertical = 1
-TargetScene = "res://Scenes/conversation_menu.tscn"
 
-[node name="Button4" parent="." instance=ExtResource("2_r082r")]
+[node name="Button4" parent="Buttons" instance=ExtResource("2_r082r")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -68,4 +67,3 @@ offset_right = 272.0
 offset_bottom = 128.0
 grow_horizontal = 1
 grow_vertical = 1
-TargetScene = "res://Scenes/world_map.tscn"

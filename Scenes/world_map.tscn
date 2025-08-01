@@ -7,17 +7,10 @@
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
-offset_left = 209.0
-offset_top = 140.0
-offset_right = 249.0
-offset_bottom = 180.0
-texture = ExtResource("1_rvr0e")
-
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 320.0
 offset_bottom = 180.0
 texture = ExtResource("1_rvr0e")
 
 [node name="Forest" parent="." instance=ExtResource("2_b7gke")]
-position = Vector2(281, 112)
+position = Vector2(276, 110)

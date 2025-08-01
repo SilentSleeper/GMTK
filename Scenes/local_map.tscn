@@ -12,3 +12,4 @@ texture = ExtResource("1_ulrls")
 
 [node name="Castle" parent="." instance=ExtResource("2_bwvs6")]
 position = Vector2(43, 34)
+targetScene = "uid://bwoiomajlw3le"
