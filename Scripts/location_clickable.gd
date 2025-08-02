@@ -40,7 +40,7 @@ func move_up():
 	textBox.transform.origin = Vector2(0, -150)
 	cursorLocation = "up"
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var screenQuarter = get_viewport().get_visible_rect().size.y / 4
 	var mousePos = get_global_mouse_position()
 	if isInside:

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bv3wymal2xre0"]
 
-[ext_resource type="Script" uid="uid://c2icotyyb5itg" path="res://pause_menu.gd" id="1_1och7"]
+[ext_resource type="Script" uid="uid://c2icotyyb5itg" path="res://Scripts/pause_menu.gd" id="1_1och7"]
 [ext_resource type="FontFile" uid="uid://daoxlemdr3mlr" path="res://Fonts/BetterPixels.ttf" id="1_emv3i"]
 [ext_resource type="Script" uid="uid://dii5qdpowh0h2" path="res://Scripts/button.gd" id="1_k0w1u"]
 [ext_resource type="PackedScene" uid="uid://dujvy8hg14ovn" path="res://Scenes/scene_button.tscn" id="4_bpi0q"]
-[ext_resource type="Script" uid="uid://dmqt1niiqdexo" path="res://Scenes/quit_button.gd" id="5_vmyb1"]
+[ext_resource type="Script" uid="uid://dmqt1niiqdexo" path="res://Scripts/quit_button.gd" id="5_vmyb1"]
 
 [node name="Pause_menu" type="Control"]
 layout_mode = 3

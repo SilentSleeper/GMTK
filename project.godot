@@ -18,8 +18,8 @@ boot_splash/fullsize=false
 
 [autoload]
 
-Global="*res://Scripts/globals.gd"
-PlayerVars="*res://Scripts/Player_vars.gd"
+Global="*res://Scripts/Global_variables/globals.gd"
+Player="*res://Scripts/Global_variables/Player_vars.gd"
 
 [display]
 
