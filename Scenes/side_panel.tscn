@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://s3farbulgn7p" path="res://Scenes/hp.tscn" id="2_mcxmu"]
 [ext_resource type="PackedScene" uid="uid://d1k3qioxyhyye" path="res://Scenes/crowns.tscn" id="3_cxf5g"]
 [ext_resource type="PackedScene" uid="uid://drwypunyot8ue" path="res://Scenes/gems.tscn" id="4_546e4"]
-[ext_resource type="Script" path="res://Scripts/SpawnerComponent.gd" id="5_cxf5g"]
+[ext_resource type="Script" uid="uid://bxk7swlkrqlhe" path="res://Scripts/SpawnerComponent.gd" id="5_cxf5g"]
 [ext_resource type="PackedScene" uid="uid://cohqd84knlwun" path="res://Scenes/settings.tscn" id="7_cr5e5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2bbl"]

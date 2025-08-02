@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bnex0eberwhii"]
 
 [ext_resource type="PackedScene" uid="uid://dsfrhu6rn7sdc" path="res://Scenes/hoverable.tscn" id="1_86ttx"]
-[ext_resource type="Texture2D" uid="uid://7dgmdmlniick" path="res://Assets/Pngs/Armor.png" id="2_p51xn"]
+[ext_resource type="Texture2D" uid="uid://vhbbtre6l64f" path="res://Assets/Pngs/Armor.png" id="2_p51xn"]
 
 [node name="No Equpiment" instance=ExtResource("1_86ttx")]
 texture_normal = ExtResource("2_p51xn")

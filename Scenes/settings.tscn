@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://cohqd84knlwun"]
+[gd_scene load_steps=4 format=3 uid="uid://cohqd84knlwun"]
 
-[ext_resource type="Texture2D" uid="uid://dmnivhxq8co0n" path="res://Assets/Pngs/Menu Wheel.png" id="1_4geyq"]
+[ext_resource type="Texture2D" uid="uid://b8ok3wv8vjec5" path="res://Assets/Pngs/Menu Wheel.png" id="1_4geyq"]
+[ext_resource type="Script" uid="uid://cjw54nikndg5w" path="res://Scripts/settings.gd" id="2_i44u3"]
+[ext_resource type="PackedScene" uid="uid://bv3wymal2xre0" path="res://Scenes/pause_menu.tscn" id="3_lhmql"]
 
 [node name="Settings" type="TextureButton"]
 offset_right = 24.0
 offset_bottom = 24.0
 texture_normal = ExtResource("1_4geyq")
+script = ExtResource("2_i44u3")
+
+[node name="Pause_menu" parent="." instance=ExtResource("3_lhmql")]

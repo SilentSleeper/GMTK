@@ -1,10 +1,13 @@
-extends Control
+extends CanvasLayer
 
 func _ready() -> void:
-	hide()
+	self.visible=false
 
 func toggleVisibility():
-	show() if hidden else hide()
+	if self.visible == false :
+		self.visible = true
+	else:
+		self.visible = false
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event is InputEventKey:
