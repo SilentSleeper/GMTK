@@ -1,7 +1,8 @@
 extends Button
-# intended for use in menus as a scene changer.
-
-@export_file("*.tscn") var targetScene = "<Select target>"
+@onready var pauseMenu: Control = $"../../.."
+@export_enum("Resume", "Back", "Cancel") var buttonType = 0
 
 func _pressed() -> void:
-	get_tree().change_scene_to_file(targetScene)
+	match buttonType:
+		0:
+			pauseMenu.hide()
