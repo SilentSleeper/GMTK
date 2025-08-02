@@ -33,11 +33,15 @@ func _input_event(viewport: Node, event: InputEvent, _shape_idx: int):
 				change_scene(targetScene, viewport)
 
 func move_down():
-	textBox.transform.origin = Vector2(0, -5)
+	textBox.transform.origin = Vector2(0, 0)
+	textBox.find_child("Sprite2D").flip_v = false
+	textBox.find_child("TextBoxContainer").position.y += 20
 	cursorLocation = "down"
 	
 func move_up():
-	textBox.transform.origin = Vector2(0, -150)
+	textBox.transform.origin = Vector2(0, -125)
+	textBox.find_child("Sprite2D").flip_v = true
+	textBox.find_child("TextBoxContainer").position.y -= 20
 	cursorLocation = "up"
 	
 func _process(_delta: float) -> void:

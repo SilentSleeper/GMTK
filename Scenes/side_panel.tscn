@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bd5usr4f6axc5"]
+[gd_scene load_steps=10 format=3 uid="uid://bd5usr4f6axc5"]
 
 [ext_resource type="Script" uid="uid://cb0k2rmbwovy5" path="res://Scripts/side_panel.gd" id="1_546e4"]
 [ext_resource type="PackedScene" uid="uid://25gws65jlcpw" path="res://Scenes/generations.tscn" id="1_ihal6"]
@@ -7,13 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://drwypunyot8ue" path="res://Scenes/gems.tscn" id="4_546e4"]
 [ext_resource type="Script" uid="uid://bxk7swlkrqlhe" path="res://Scripts/SpawnerComponent.gd" id="5_cxf5g"]
 [ext_resource type="PackedScene" uid="uid://cohqd84knlwun" path="res://Scenes/settings.tscn" id="7_cr5e5"]
+[ext_resource type="Texture2D" uid="uid://dmo0uxc1k3ayg" path="res://Assets/Pngs/Leftside Menu.png" id="8_pg47a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2bbl"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+bg_color = Color(0, 0, 0, 0)
 border_color = Color(0.984314, 0.933333, 0.921569, 1)
 
 [node name="Side_Panel" type="CanvasLayer"]
@@ -59,3 +56,7 @@ offset_left = 4.0
 offset_top = 151.0
 offset_right = 28.0
 offset_bottom = 175.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 90)
+texture = ExtResource("8_pg47a")

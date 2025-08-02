@@ -2,7 +2,6 @@ extends TextureButton
 
 @export var description : String
 @onready var tooltip2: CanvasLayer = $Tooltip2
-#@onready var tooltip: CanvasLayer = $tooltip
 var mousePos = Vector2(0,0)
 var isInside = false
 var offsetY = 10

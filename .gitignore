@@ -1,5 +1,7 @@
 # Godot 4+ specific ignores
 .godot/
+.gitignore
 /android/
 Scenes/Test_scene
 Scripts/test_script
+

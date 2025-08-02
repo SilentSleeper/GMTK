@@ -46,6 +46,7 @@ script = ExtResource("1_uee5o")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 
 [node name="Location_Texture" type="Sprite2D" parent="."]
+z_index = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

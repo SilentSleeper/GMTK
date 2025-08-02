@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://8y555j2n2ony"]
+
+[ext_resource type="PackedScene" uid="uid://dsfrhu6rn7sdc" path="res://Scenes/hoverable.tscn" id="1_5yr4j"]
+[ext_resource type="Texture2D" uid="uid://6bqho07q8apx" path="res://Assets/Pngs/Item.png" id="2_uepp0"]
+
+[node name="No Item" instance=ExtResource("1_5yr4j")]
+texture_normal = ExtResource("2_uepp0")
+description = "Here I could hold something."

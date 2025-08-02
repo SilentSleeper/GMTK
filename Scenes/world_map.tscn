@@ -1,23 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://bign6s0yl7gt3"]
+[gd_scene load_steps=6 format=3 uid="uid://bign6s0yl7gt3"]
 
-[ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="1_rvr0e"]
+[ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="1_llh6y"]
 [ext_resource type="PackedScene" uid="uid://dd0cowapkq8uw" path="res://Scenes/forest.tscn" id="2_b7gke"]
+[ext_resource type="Texture2D" uid="uid://cioji2sd33x6a" path="res://Assets/Pngs/BigMap.png" id="3_g8h5j"]
 [ext_resource type="PackedScene" uid="uid://bd5usr4f6axc5" path="res://Scenes/side_panel.tscn" id="3_llh6y"]
-[ext_resource type="Script" uid="uid://3ryrgjrlyfas" path="res://Scripts/Instantiatables/trait.gd" id="4_g8h5j"]
+[ext_resource type="PackedScene" uid="uid://bhytvap8k8eh3" path="res://Scenes/mountains.tscn" id="5_67byq"]
 
 [node name="World_Map" type="Node2D"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 offset_right = 320.0
 offset_bottom = 180.0
-texture = ExtResource("1_rvr0e")
-
-[node name="Forest" parent="." instance=ExtResource("2_b7gke")]
-position = Vector2(276, 92)
-description = "The forest"
+texture = ExtResource("1_llh6y")
 
 [node name="Side_Panel" parent="." instance=ExtResource("3_llh6y")]
-script = ExtResource("4_g8h5j")
-name = ""
-description = ""
-icon = null
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(176, 90)
+texture = ExtResource("3_g8h5j")
+
+[node name="Forest" parent="." instance=ExtResource("2_b7gke")]
+position = Vector2(119, 150)
+description = "The Forest"
+
+[node name="Mountains" parent="." instance=ExtResource("5_67byq")]
+position = Vector2(132, 84)
+description = "The Mountains"
+

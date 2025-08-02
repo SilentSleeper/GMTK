@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkywpn61fak43"]
+[gd_scene load_steps=4 format=3 uid="uid://bkywpn61fak43"]
 
 [ext_resource type="Texture2D" uid="uid://dpm10s2khsm6d" path="res://Assets/Rect_small.png" id="1_ff0vt"]
 [ext_resource type="FontFile" uid="uid://dn0k1s700cxg3" path="res://Fonts/Numbers.ttf" id="2_gwkwl"]
+[ext_resource type="Texture2D" uid="uid://bjweakbf8rfmq" path="res://Assets/Pngs/Digital Digit.png" id="2_tp64y"]
 
 [node name="Stats_Template" type="Node2D"]
 
@@ -12,6 +13,18 @@ offset_bottom = 9.0
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3, 4)
 texture = ExtResource("1_ff0vt")
+
+[node name="DigitalDigit" type="Sprite2D" parent="."]
+position = Vector2(11, 4)
+texture = ExtResource("2_tp64y")
+
+[node name="DigitalDigit2" type="Sprite2D" parent="."]
+position = Vector2(17, 4)
+texture = ExtResource("2_tp64y")
+
+[node name="DigitalDigit3" type="Sprite2D" parent="."]
+position = Vector2(23, 4)
+texture = ExtResource("2_tp64y")
 
 [node name="Label" type="RichTextLabel" parent="."]
 custom_minimum_size = Vector2(18, 0)

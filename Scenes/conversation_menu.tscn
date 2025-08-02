@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://hy2hla3whkq8"]
 
 [ext_resource type="Script" uid="uid://dtqinlrbfbhk" path="res://Scripts/conv_menu.gd" id="1_w57kf"]
-[ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="2_ejib7"]
+[ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="2_ejib7"]
 [ext_resource type="PackedScene" uid="uid://bd5usr4f6axc5" path="res://Scenes/side_panel.tscn" id="3_ejib7"]
 
 [node name="Conv_menu" type="Node2D"]
@@ -23,6 +23,7 @@ offset_top = 117.0
 offset_right = 314.0
 offset_bottom = 176.0
 text = "This is placeholder text. Things said by a character will be displayed here."
+scroll_active = false
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 editor_description = "Visible when RichTextLabel isn't."
