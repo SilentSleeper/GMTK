@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://da7d7opge3p6r"]
 
-[ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="1_6kyp7"]
 [ext_resource type="Script" uid="uid://y5xsigx2poww" path="res://Scripts/interaction_menu.gd" id="1_ahhpg"]
+[ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="2_uaipn"]
 [ext_resource type="Script" uid="uid://bxk7swlkrqlhe" path="res://Scripts/SpawnerComponent.gd" id="2_xo5n8"]
 [ext_resource type="PackedScene" uid="uid://dkwry68s1goqp" path="res://Scenes/action_button.tscn" id="3_ahhpg"]
 [ext_resource type="PackedScene" uid="uid://bd5usr4f6axc5" path="res://Scenes/side_panel.tscn" id="5_uaipn"]
@@ -13,7 +13,7 @@ script = ExtResource("1_ahhpg")
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 320.0
 offset_bottom = 180.0
-texture = ExtResource("1_6kyp7")
+texture = ExtResource("2_uaipn")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 offset_left = 32.0
