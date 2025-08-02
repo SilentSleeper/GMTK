@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://drwypunyot8ue"]
+
+[ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_1vp1u"]
+[ext_resource type="Texture2D" uid="uid://8vn1o428bst" path="res://Assets/Gems.png" id="2_1my28"]
+
+[node name="Gems" instance=ExtResource("1_1vp1u")]
+
+[node name="Sprite2D" parent="MarginContainer/Panel" index="0"]
+position = Vector2(4, 4)
+texture = ExtResource("2_1my28")

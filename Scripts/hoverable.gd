@@ -1,11 +1,11 @@
-extends Area2D
+extends TextureButton
 
 @export var description : String
 @onready var tooltip2: CanvasLayer = $Tooltip2
 #@onready var tooltip: CanvasLayer = $tooltip
 var mousePos = Vector2(0,0)
 var isInside = false
-var offsetY = 5
+var offsetY = 10
 
 func _ready() -> void:
 	mouse_entered.connect(_on_mouse_entered)
@@ -21,9 +21,9 @@ func _on_mouse_exited():
 	
 func _process(delta: float) -> void:
 	mousePos = get_global_mouse_position()
-	if mousePos.y > 90 :
-		offsetY = -70
+	if mousePos.y > 105 :
+		offsetY = -80
 	else :
 		offsetY = 5
 	if isInside:
-		tooltip2.transform.origin = mousePos + Vector2(5,offsetY)
+		tooltip2.transform.origin = mousePos + Vector2(10,offsetY)

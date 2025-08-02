@@ -3,11 +3,7 @@
 [ext_resource type="Script" uid="uid://e8a0vbnyufji" path="res://Scripts/hoverable.gd" id="1_om58j"]
 [ext_resource type="PackedScene" uid="uid://c2s7al0ocjqoc" path="res://Scenes/tooltip_2.tscn" id="2_kt5ld"]
 
-[node name="Hoverable" type="Area2D"]
+[node name="Hoverable" type="TextureButton"]
 script = ExtResource("1_om58j")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-[node name="Passive_Texture" type="Sprite2D" parent="."]
 
 [node name="Tooltip2" parent="." instance=ExtResource("2_kt5ld")]

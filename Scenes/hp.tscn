@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://s3farbulgn7p"]
+
+[ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_c4knn"]
+[ext_resource type="Texture2D" uid="uid://c8s3ojp65hiub" path="res://Assets/Heart.png" id="2_hqjsl"]
+
+[node name="HP" instance=ExtResource("1_c4knn")]
+
+[node name="Sprite2D" parent="MarginContainer/Panel" index="0"]
+position = Vector2(4, 5)
+texture = ExtResource("2_hqjsl")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="1_ulrls"]
 [ext_resource type="PackedScene" uid="uid://cnd2artnafrx6" path="res://Scenes/castle.tscn" id="2_bwvs6"]
-[ext_resource type="PackedScene" uid="uid://c1jbesd0tn4rp" path="res://Scenes/upbringing.tscn" id="3_d5hjl"]
+[ext_resource type="PackedScene" uid="uid://bd5usr4f6axc5" path="res://Scenes/side_panel.tscn" id="3_d5hjl"]
 
 [node name="Local_Map" type="Node2D"]
 
@@ -12,8 +12,7 @@ offset_bottom = 180.0
 texture = ExtResource("1_ulrls")
 
 [node name="Castle" parent="." instance=ExtResource("2_bwvs6")]
-position = Vector2(43, 34)
+position = Vector2(270, 74)
 targetScene = "uid://bwoiomajlw3le"
 
-[node name="Upbringing" parent="." instance=ExtResource("3_d5hjl")]
-position = Vector2(24, 85)
+[node name="Side_Panel" parent="." instance=ExtResource("3_d5hjl")]

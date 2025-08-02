@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cohqd84knlwun"]
+
+[ext_resource type="Texture2D" uid="uid://ciuq2l87fjeus" path="res://Assets/Menu Wheel.png" id="1_4geyq"]
+
+[node name="Settings" type="TextureButton"]
+offset_right = 24.0
+offset_bottom = 24.0
+texture_normal = ExtResource("1_4geyq")

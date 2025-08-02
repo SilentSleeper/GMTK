@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://bd5usr4f6axc5"]
+
+[ext_resource type="Script" uid="uid://cb0k2rmbwovy5" path="res://Scripts/side_panel.gd" id="1_546e4"]
+[ext_resource type="PackedScene" uid="uid://25gws65jlcpw" path="res://Scenes/generations.tscn" id="1_ihal6"]
+[ext_resource type="PackedScene" uid="uid://s3farbulgn7p" path="res://Scenes/hp.tscn" id="2_mcxmu"]
+[ext_resource type="PackedScene" uid="uid://d1k3qioxyhyye" path="res://Scenes/crowns.tscn" id="3_cxf5g"]
+[ext_resource type="PackedScene" uid="uid://drwypunyot8ue" path="res://Scenes/gems.tscn" id="4_546e4"]
+[ext_resource type="Script" uid="uid://bxk7swlkrqlhe" path="res://Scripts/SpawnerComponent.gd" id="5_cxf5g"]
+[ext_resource type="PackedScene" uid="uid://cohqd84knlwun" path="res://Scenes/settings.tscn" id="7_cr5e5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2bbl"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.984314, 0.933333, 0.921569, 1)
+
+[node name="Side_Panel" type="CanvasLayer"]
+script = ExtResource("1_546e4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 32.0
+offset_bottom = 180.0
+
+[node name="Panel" type="Panel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_q2bbl")
+
+[node name="Generations" parent="MarginContainer/Panel" instance=ExtResource("1_ihal6")]
+position = Vector2(3, 19)
+
+[node name="HP" parent="MarginContainer/Panel" instance=ExtResource("2_mcxmu")]
+position = Vector2(3, 32)
+
+[node name="Crowns" parent="MarginContainer/Panel" instance=ExtResource("3_cxf5g")]
+position = Vector2(3, 45)
+
+[node name="Gems" parent="MarginContainer/Panel" instance=ExtResource("4_546e4")]
+position = Vector2(3, 58)
+
+[node name="HFlowContainer" type="HFlowContainer" parent="MarginContainer/Panel"]
+clip_contents = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 73.0
+offset_right = 31.0
+offset_bottom = 130.0
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 3
+
+[node name="SpawnerComponent" type="Node2D" parent="MarginContainer/Panel/HFlowContainer"]
+script = ExtResource("5_cxf5g")
+metadata/_custom_type_script = "uid://bxk7swlkrqlhe"
+
+[node name="Settings" parent="MarginContainer/Panel" instance=ExtResource("7_cr5e5")]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 151.0
+offset_right = 28.0
+offset_bottom = 175.0

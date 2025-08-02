@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://hy2hla3whkq8"]
+[gd_scene load_steps=4 format=3 uid="uid://hy2hla3whkq8"]
 
 [ext_resource type="Script" uid="uid://dtqinlrbfbhk" path="res://Scripts/conv_menu.gd" id="1_w57kf"]
 [ext_resource type="Texture2D" uid="uid://bte2kwru5b8vh" path="res://Assets/Black_background.png" id="2_ejib7"]
+[ext_resource type="PackedScene" uid="uid://bd5usr4f6axc5" path="res://Scenes/side_panel.tscn" id="3_ejib7"]
 
 [node name="Conv_menu" type="Node2D"]
 editor_description = "Conversation menu - appears after pressing \"Talk\" or similar in the interaction menu."
@@ -29,3 +30,5 @@ offset_left = 40.0
 offset_top = 117.0
 offset_right = 314.0
 offset_bottom = 176.0
+
+[node name="Side_Panel" parent="." instance=ExtResource("3_ejib7")]
