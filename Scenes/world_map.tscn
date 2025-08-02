@@ -26,4 +26,3 @@ description = "The Forest"
 [node name="Mountains" parent="." instance=ExtResource("5_67byq")]
 position = Vector2(132, 84)
 description = "The Mountains"
-

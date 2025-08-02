@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d1k3qioxyhyye"]
 
 [ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_eq830"]
-[ext_resource type="Texture2D" uid="uid://c3ycjjypsumpo" path="res://Assets/Coin.png" id="2_i1kss"]
+[ext_resource type="Texture2D" uid="uid://e3lh16akisxv" path="res://Assets/Pngs/Coin.png" id="2_i1kss"]
 
 [node name="Crowns" instance=ExtResource("1_eq830")]
 
-[node name="Sprite2D" parent="MarginContainer/Panel" index="0"]
+[node name="MarginContainer_Panel#Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(3, 4)
 texture = ExtResource("2_i1kss")

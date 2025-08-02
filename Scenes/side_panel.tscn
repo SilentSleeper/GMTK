@@ -5,13 +5,15 @@
 [ext_resource type="PackedScene" uid="uid://s3farbulgn7p" path="res://Scenes/hp.tscn" id="2_mcxmu"]
 [ext_resource type="PackedScene" uid="uid://d1k3qioxyhyye" path="res://Scenes/crowns.tscn" id="3_cxf5g"]
 [ext_resource type="PackedScene" uid="uid://drwypunyot8ue" path="res://Scenes/gems.tscn" id="4_546e4"]
-[ext_resource type="Script" uid="uid://bxk7swlkrqlhe" path="res://Scripts/SpawnerComponent.gd" id="5_cxf5g"]
+[ext_resource type="Script" path="res://Scripts/SpawnerComponent.gd" id="5_cxf5g"]
 [ext_resource type="PackedScene" uid="uid://cohqd84knlwun" path="res://Scenes/settings.tscn" id="7_cr5e5"]
-[ext_resource type="Texture2D" uid="uid://dmo0uxc1k3ayg" path="res://Assets/Pngs/Leftside Menu.png" id="8_pg47a"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2bbl"]
 bg_color = Color(0, 0, 0, 0)
 border_color = Color(0.984314, 0.933333, 0.921569, 1)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cr5e5"]
+load_path = "res://.godot/imported/Leftside Menu.png-641653ad1b8696f29dd8b34a7d438ccf.ctex"
 
 [node name="Side_Panel" type="CanvasLayer"]
 script = ExtResource("1_546e4")
@@ -48,7 +50,6 @@ theme_override_constants/v_separation = 3
 
 [node name="SpawnerComponent" type="Node2D" parent="MarginContainer/Panel/HFlowContainer"]
 script = ExtResource("5_cxf5g")
-metadata/_custom_type_script = "uid://bxk7swlkrqlhe"
 
 [node name="Settings" parent="MarginContainer/Panel" instance=ExtResource("7_cr5e5")]
 layout_mode = 0
@@ -59,4 +60,4 @@ offset_bottom = 175.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(16, 90)
-texture = ExtResource("8_pg47a")
+texture = SubResource("CompressedTexture2D_cr5e5")

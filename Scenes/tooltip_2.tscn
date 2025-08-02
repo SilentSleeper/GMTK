@@ -1,10 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://c2s7al0ocjqoc"]
 
 [ext_resource type="Script" uid="uid://7mg3y2n8x1bh" path="res://Scripts/tooltip_2.gd" id="1_bxr8d"]
-[ext_resource type="Texture2D" uid="uid://b1gnqany7xoe8" path="res://Assets/Pngs/ToolTip.png" id="2_7mnb1"]
 [ext_resource type="FontFile" uid="uid://daoxlemdr3mlr" path="res://Fonts/BetterPixels.ttf" id="2_46toj"]
 [ext_resource type="FontFile" uid="uid://b8sy4c575mtef" path="res://Fonts/BoldLCD.ttf" id="2_s7k51"]
 [ext_resource type="FontFile" uid="uid://cmtks3r8mym8i" path="res://Fonts/PixelMasterBold.ttf" id="3_s7k51"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_46toj"]
+load_path = "res://.godot/imported/ToolTip.png-92bc8cceed5837f68d096a802e0e2402.ctex"
 
 [sub_resource type="Animation" id="Animation_0kxgl"]
 resource_name = "Apearring"
@@ -83,7 +85,7 @@ size_flags_vertical = 3
 
 [node name="Panel" type="NinePatchRect" parent="TextBoxContainer"]
 layout_mode = 2
-texture = ExtResource("2_7mnb1")
+texture = SubResource("CompressedTexture2D_46toj")
 region_rect = Rect2(0, 0, 18, 8)
 patch_margin_left = 2
 patch_margin_top = 2

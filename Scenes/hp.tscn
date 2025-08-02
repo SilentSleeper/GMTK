@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://s3farbulgn7p"]
 
 [ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_c4knn"]
-[ext_resource type="Texture2D" uid="uid://c8s3ojp65hiub" path="res://Assets/Heart.png" id="2_hqjsl"]
+[ext_resource type="Texture2D" uid="uid://b5sewjwmwq75d" path="res://Assets/Pngs/Heart.png" id="2_hqjsl"]
 
 [node name="HP" instance=ExtResource("1_c4knn")]
 
-[node name="Sprite2D" parent="MarginContainer/Panel" index="0"]
-position = Vector2(4, 5)
+[node name="MarginContainer_Panel#Sprite2D" type="Sprite2D" parent="." index="1"]
+position = Vector2(3, 5)
 texture = ExtResource("2_hqjsl")
