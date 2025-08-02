@@ -16,6 +16,11 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/show_image=false
 boot_splash/fullsize=false
 
+[autoload]
+
+Global="*res://Scripts/globals.gd"
+PlayerVars="*res://Scripts/Player_vars.gd"
+
 [display]
 
 window/size/viewport_width=320
@@ -24,6 +29,13 @@ window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
+
+[input]
+
+ShowPauseMenu={
+"deadzone": 0.2,
+"events": []
+}
 
 [rendering]
 
