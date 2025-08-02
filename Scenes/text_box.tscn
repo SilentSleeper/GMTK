@@ -1,11 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnds07vngyg4e"]
+[gd_scene load_steps=9 format=3 uid="uid://bnds07vngyg4e"]
 
 [ext_resource type="Script" uid="uid://d4lymvypyqaql" path="res://Scripts/text_box.gd" id="1_ot2p7"]
 [ext_resource type="FontFile" uid="uid://daoxlemdr3mlr" path="res://Fonts/BetterPixels.ttf" id="2_0kxgl"]
 [ext_resource type="FontFile" uid="uid://cmtks3r8mym8i" path="res://Fonts/PixelMasterBold.ttf" id="2_ot2p7"]
+[ext_resource type="Texture2D" uid="uid://b38wo7bpmkyia" path="res://Assets/Pngs/Textbox.png" id="2_w6krc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0kxgl"]
-bg_color = Color(0, 0, 0, 1)
+bg_color = Color(0.0470588, 0.0666667, 0.101961, 1)
 
 [sub_resource type="Animation" id="Animation_0kxgl"]
 resource_name = "Apearring"
@@ -13,7 +14,7 @@ length = 1.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D/TextBoxContainer:scale")
+tracks/0/path = NodePath("TextBoxContainer:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -25,7 +26,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/Start:visible_ratio")
+tracks/1/path = NodePath("TextBoxContainer/MarginContainer/HBoxContainer/Start:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -37,7 +38,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/2/path = NodePath("TextBoxContainer/MarginContainer/HBoxContainer/Label:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -49,7 +50,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/End:visible_ratio")
+tracks/3/path = NodePath("TextBoxContainer/MarginContainer/HBoxContainer/End:visible_ratio")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -58,13 +59,25 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0, 0.0, 1.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
 [sub_resource type="Animation" id="Animation_ot2p7"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D/TextBoxContainer:scale")
+tracks/0/path = NodePath("TextBoxContainer:scale")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -76,7 +89,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/Start:visible_ratio")
+tracks/1/path = NodePath("TextBoxContainer/MarginContainer/HBoxContainer/Start:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -88,7 +101,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/Label:visible_ratio")
+tracks/2/path = NodePath("TextBoxContainer/MarginContainer/HBoxContainer/Label:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -100,7 +113,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/End:visible_ratio")
+tracks/3/path = NodePath("TextBoxContainer/MarginContainer/HBoxContainer/End:visible_ratio")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -108,6 +121,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ot2p7"]
@@ -119,35 +144,34 @@ _data = {
 [node name="Text_Box" type="CanvasLayer"]
 script = ExtResource("1_ot2p7")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
-[node name="TextBoxContainer" type="MarginContainer" parent="Sprite2D"]
+[node name="TextBoxContainer" type="MarginContainer" parent="."]
 anchors_preset = -1
 anchor_left = 32.0
 anchor_top = 150.0
 anchor_right = 32.0
 anchor_bottom = 150.0
-offset_right = 288.0
-offset_bottom = 30.0
+offset_left = -10188.0
+offset_top = -26853.0
+offset_right = -9940.0
+offset_bottom = -26823.0
 grow_vertical = 2
-pivot_offset = Vector2(144, 0)
-metadata/_edit_use_anchors_ = true
+pivot_offset = Vector2(124, 0)
 
-[node name="Panel" type="Panel" parent="Sprite2D/TextBoxContainer"]
+[node name="Panel" type="Panel" parent="TextBoxContainer"]
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_0kxgl")
 
-[node name="MarginContainer" type="MarginContainer" parent="Sprite2D/TextBoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextBoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 3
 theme_override_constants/margin_top = 3
 theme_override_constants/margin_right = 3
 theme_override_constants/margin_bottom = 3
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Sprite2D/TextBoxContainer/MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="TextBoxContainer/MarginContainer"]
 layout_mode = 2
 
-[node name="Start" type="Label" parent="Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer"]
+[node name="Start" type="Label" parent="TextBoxContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(7, 0)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -157,7 +181,7 @@ text = "*"
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label" type="RichTextLabel" parent="Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer"]
+[node name="Label" type="RichTextLabel" parent="TextBoxContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -172,7 +196,7 @@ justification_flags = 0
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="End" type="Label" parent="Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer"]
+[node name="End" type="Label" parent="TextBoxContainer/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(7, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -181,6 +205,10 @@ theme_override_fonts/font = ExtResource("2_0kxgl")
 text = "V"
 visible_characters = 0
 visible_ratio = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(176, 152)
+texture = ExtResource("2_w6krc")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

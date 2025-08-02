@@ -1,9 +1,9 @@
 extends CanvasLayer
 
-@onready var textBoxContainer: MarginContainer = $Sprite2D/TextBoxContainer
-@onready var start: Label = $Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/Start
-@onready var end: Label = $Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/End
-@onready var label: RichTextLabel = $Sprite2D/TextBoxContainer/MarginContainer/HBoxContainer/Label
+@onready var textBoxContainer: MarginContainer = $TextBoxContainer
+@onready var start: Label = $TextBoxContainer/MarginContainer/HBoxContainer/Start
+@onready var end: Label = $TextBoxContainer/MarginContainer/HBoxContainer/End
+@onready var label: RichTextLabel = $TextBoxContainer/MarginContainer/HBoxContainer/Label
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 
 
@@ -14,12 +14,12 @@ func hide_container():
 	start.text = ""
 	label.text = ""
 	end.text= ""
-	textBoxContainer.hide()
+	self.hide()
 	
 func show_container():
 	start.text = "*"
 	end.text= "v"
-	textBoxContainer.show()
+	self.show()
 	animationPlayer.play("Apearring")
 	
 func add_text (next_text : String):
