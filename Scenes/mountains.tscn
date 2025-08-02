@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhytvap8k8eh3"]
+
+[ext_resource type="PackedScene" uid="uid://c27aw3b70omj3" path="res://Scenes/Location_Clickable.tscn" id="1_4t1fn"]
+[ext_resource type="Texture2D" uid="uid://bxs60wxxinxun" path="res://Assets/Pngs/Mountains.png" id="2_s1ye7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vinww"]
+size = Vector2(98, 70)
+
+[node name="Mountains" instance=ExtResource("1_4t1fn")]
+
+[node name="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_vinww")
+
+[node name="Location_Texture" parent="." index="1"]
+texture = ExtResource("2_s1ye7")
