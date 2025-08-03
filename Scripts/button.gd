@@ -6,3 +6,4 @@ func _pressed() -> void:
 	match buttonType:
 		0:
 			pauseMenu.hide()
+			get_tree().paused = false

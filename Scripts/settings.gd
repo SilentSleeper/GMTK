@@ -6,3 +6,4 @@ func _gui_input(event: InputEvent) -> void:
 		match event.button_index:
 			MOUSE_BUTTON_LEFT:
 				pause_menu.visible = true
+				get_tree().paused = true
