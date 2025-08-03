@@ -43,8 +43,6 @@ _data = {
 [node name="Location_Clickable" type="Area2D"]
 script = ExtResource("1_uee5o")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
 [node name="Location_Texture" type="Sprite2D" parent="."]
 z_index = 1
 
@@ -54,3 +52,5 @@ libraries = {
 }
 
 [node name="Text_Box" parent="." instance=ExtResource("2_22f0b")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
