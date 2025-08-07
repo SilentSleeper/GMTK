@@ -1,5 +1,6 @@
 extends TextureButton
-
+## Base class for graphical items that show special properties when hovered on by the cursor.
+ 
 @export var description : String
 @onready var tooltip2: CanvasLayer = $Tooltip2
 var mousePos = Vector2(0,0)

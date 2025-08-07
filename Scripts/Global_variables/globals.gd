@@ -1,4 +1,8 @@
 extends Node
+## General-use flags and data collections regarding the game's world.
+##
+## Contains collections of the game's sets of content, numerical representations of various 
+## in-game traits and items, as well as flags signaling the status of certain events. 
 
 var maxPlayerHealth
 
@@ -7,17 +11,22 @@ var worldFlags = {
 	"mGuild": false, # Merchant's Guild exists
 	"bGuild": false, # Builder's Guild exists
 	"mAcademy": false, # Magic Academy exists
-	"killedWolves": false,
+	"killedWolves": false, # Killed the wolves in the forest
 	"metEnua": false,
 	"discoveredSprings": false
 }
 
 # Trait and item collections
-var Upbringings = [
-	"Rich", 
-	"Medium", 
-	"Poor"
-]
+
+var poorStartMoney = 10
+var mediumStartMoney = 50
+var richStartMoney = 100
+
+var Upbringings = {
+	"Rich": richStartMoney,
+	"Medium": mediumStartMoney,
+	"Poor": poorStartMoney
+}
 
 var Personalities = [
 	"Austere",

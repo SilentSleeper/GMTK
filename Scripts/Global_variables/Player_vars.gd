@@ -1,12 +1,17 @@
 extends Node
+## Data file / class for the player instance.
+##
+## Contains data referring to the current player instance, such as stats, traits and inventory.
+## Also contains methods for the handling of said data.
 
-static var Generations: int = 12
-static var Health: int = 100
-static var Coins: int = 0
-static var Gems: int = 0
-static var Defense: int = 0
 
-static var Traits = {
+var Generations: int = 12
+var Health: int = 100
+var Coins: int = 0
+var Gems: int = 0
+var Defense: int = 0
+
+var Traits = {
 	"Upbringing": null,
 	"Personality": null,
 	"Profession": null,
@@ -14,9 +19,10 @@ static var Traits = {
 	"WornItems": null
 }
 
-var Inventory: Dictionary[Item, int] = {} 
+var Inventory: Dictionary[String, int] = {} 
 
-static func initTraits(Upbringing: String, Personality: String, Profession: String, Passives: Array[String], WornItems: Array[String]) -> void:
+func initTraits(Upbringing: String, Personality: String, Profession: String, 
+Passives: Array[String], WornItems: Array[String]) -> void:
 	for i in Traits:
 		Traits[i] = null
 	
@@ -37,8 +43,11 @@ static func initTraits(Upbringing: String, Personality: String, Profession: Stri
 		assert(Global.wearableItems.has(i), "One or more invalid Worn Items in constructor")
 	Traits["WornItems"] = WornItems
 
-func addItem(itemArg: Item, Amount: int):
+func addItem(itemArg: String, Amount := 1):
+	assert(Global.Items.has(itemArg), "Invalid item tried to be added")
 	if Inventory.has(itemArg):
 		Inventory[itemArg] += Amount
 	else:
 		Inventory.set(itemArg, Amount)
+	
+	

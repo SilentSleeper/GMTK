@@ -1,4 +1,6 @@
 extends Node2D
+## Base scene for representing any non-conversational interaction inside the game world.
+
 @onready var spawner_component: SpawnerComponent = $MarginContainer/HFlowContainer/SpawnerComponent
 @onready var h_flow_container: HFlowContainer = $MarginContainer/HFlowContainer
 

@@ -1,5 +1,5 @@
 extends Button
-# intended for use in menus as a scene changer.
+## Intended for use in menus as a scene changer.
 
 @export_file("*.tscn") var targetScene = "<Select target>"
 
