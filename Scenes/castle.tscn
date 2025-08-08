@@ -1,18 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://cnd2artnafrx6"]
+[gd_scene load_steps=3 format=3 uid="uid://cnd2artnafrx6"]
 
 [ext_resource type="PackedScene" uid="uid://c27aw3b70omj3" path="res://Scenes/Location_Clickable.tscn" id="1_r1mkv"]
 [ext_resource type="Texture2D" uid="uid://b48h22vkgqifi" path="res://Assets/castle.png" id="2_p6e6l"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ja3m"]
-size = Vector2(65, 59)
 
 [node name="Castle" instance=ExtResource("1_r1mkv")]
 description = "The Castle"
 targetScene = "uid://da7d7opge3p6r"
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2(0.5, 3.5)
-shape = SubResource("RectangleShape2D_8ja3m")
-
-[node name="Location_Texture" parent="." index="1"]
+[node name="Location_Texture" parent="." index="0"]
 texture = ExtResource("2_p6e6l")
