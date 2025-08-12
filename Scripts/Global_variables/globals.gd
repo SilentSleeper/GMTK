@@ -24,7 +24,7 @@ var richStartMoney = 100
 
 var Upbringings = {
 	"Rich": richStartMoney,
-	"Medium": mediumStartMoney,
+	"Modest": mediumStartMoney,
 	"Poor": poorStartMoney
 }
 

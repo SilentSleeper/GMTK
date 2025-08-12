@@ -4,6 +4,7 @@ extends Node
 ## Contains data referring to the current player instance, such as stats, traits and inventory.
 ## Also contains methods for the handling of said data.
 
+signal trait_changed
 
 var Generations: int = 12
 var Health: int = 100
@@ -21,14 +22,17 @@ var Traits = {
 
 var Inventory: Dictionary[String, int] = {} 
 
-func initTraits(Upbringing: String, Personality: String, Profession: String, 
-Passives: Array[String], WornItems: Array[String]) -> void:
+
+
+func initTraits(Upbringing: String = "", Personality: String = "", Profession: String = "", 
+Passives: Array[String] = [], WornItems: Array[String] = []) -> void:
 	for i in Traits:
 		Traits[i] = null
 	
 	assert(Global.Upbringings.has(Upbringing), "Invalid Upbringing in constructor")
 	Traits["Upbringing"] = Upbringing
-	
+	Coins = Global.Upbringings[Upbringing]
+	trait_changed.emit()
 	assert(Global.Personalities.has(Personality), "Invalid Personality in constructor")
 	Traits["Personality"] = Personality
 	
