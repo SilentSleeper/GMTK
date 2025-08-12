@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1k3qioxyhyye"]
+[gd_scene load_steps=4 format=3 uid="uid://d1k3qioxyhyye"]
 
 [ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_eq830"]
+[ext_resource type="Script" uid="uid://rjj78l3ngc6m" path="res://Scripts/crowns.gd" id="2_0ysd2"]
 [ext_resource type="Texture2D" uid="uid://e3lh16akisxv" path="res://Assets/Pngs/Coin.png" id="2_i1kss"]
 
 [node name="Crowns" instance=ExtResource("1_eq830")]
+script = ExtResource("2_0ysd2")
 
 [node name="MarginContainer_Panel#Sprite2D" type="Sprite2D" parent="." index="1"]
 position = Vector2(3, 4)

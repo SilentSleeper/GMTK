@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://drwypunyot8ue"]
+[gd_scene load_steps=4 format=3 uid="uid://drwypunyot8ue"]
 
 [ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_1vp1u"]
 [ext_resource type="Texture2D" uid="uid://j6adh32m0tj3" path="res://Assets/Pngs/Gems.png" id="2_1my28"]
+[ext_resource type="Script" uid="uid://d2a2vc0irtswk" path="res://Scripts/gems.gd" id="2_sddl8"]
 
 [node name="Gems" instance=ExtResource("1_1vp1u")]
+script = ExtResource("2_sddl8")
 
 [node name="MarginContainer_Panel#Sprite2D" type="Sprite2D" parent="." index="1"]
 position = Vector2(3, 4)

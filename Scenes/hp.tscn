@@ -1,10 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://s3farbulgn7p"]
+[gd_scene load_steps=4 format=3 uid="uid://s3farbulgn7p"]
 
 [ext_resource type="PackedScene" uid="uid://bkywpn61fak43" path="res://Scenes/stats_template.tscn" id="1_c4knn"]
 [ext_resource type="Texture2D" uid="uid://b5sewjwmwq75d" path="res://Assets/Pngs/Heart.png" id="2_hqjsl"]
+[ext_resource type="Script" uid="uid://hlgl3s1bky2l" path="res://Scripts/hp.gd" id="2_lt7up"]
 
 [node name="HP" instance=ExtResource("1_c4knn")]
+script = ExtResource("2_lt7up")
 
 [node name="MarginContainer_Panel#Sprite2D" type="Sprite2D" parent="." index="1"]
 position = Vector2(3, 5)
 texture = ExtResource("2_hqjsl")
+
+[node name="Label" parent="." index="5"]
+text = "9"
