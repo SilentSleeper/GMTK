@@ -31,5 +31,6 @@ theme_override_colors/default_color = Color(0.984314, 0.933333, 0.921569, 1)
 theme_override_fonts/normal_font = ExtResource("2_gwkwl")
 text = "999"
 scroll_active = false
-horizontal_alignment = 1
+horizontal_alignment = 2
+vertical_alignment = 3
 justification_flags = 0
