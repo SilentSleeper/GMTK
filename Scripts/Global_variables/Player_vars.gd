@@ -32,7 +32,7 @@ Passives: Array[String] = [], WornItems: Array[String] = []) -> void:
 	assert(Global.Upbringings.has(Upbringing), "Invalid Upbringing in constructor")
 	Traits["Upbringing"] = Upbringing
 	Coins = Global.Upbringings[Upbringing]
-	trait_changed.emit()
+	
 	assert(Global.Personalities.has(Personality), "Invalid Personality in constructor")
 	Traits["Personality"] = Personality
 	
@@ -46,6 +46,7 @@ Passives: Array[String] = [], WornItems: Array[String] = []) -> void:
 	for i in WornItems:
 		assert(Global.wearableItems.has(i), "One or more invalid Worn Items in constructor")
 	Traits["WornItems"] = WornItems
+	trait_changed.emit()
 
 func addItem(itemArg: String, Amount := 1):
 	assert(Global.Items.has(itemArg), "Invalid item tried to be added")

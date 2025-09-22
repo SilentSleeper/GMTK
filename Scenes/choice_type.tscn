@@ -1,0 +1,158 @@
+[gd_scene load_steps=14 format=3 uid="uid://b7jcsftsbwyt3"]
+
+[ext_resource type="Texture2D" uid="uid://dh2gd205ivyqv" path="res://Assets/Pngs/ToolTip.png" id="1_4xi2g"]
+[ext_resource type="Script" uid="uid://d4bustcery432" path="res://Scripts/choice_type.gd" id="1_cdcgc"]
+[ext_resource type="FontFile" uid="uid://b8sy4c575mtef" path="res://Fonts/BoldLCD.ttf" id="2_1m5ob"]
+[ext_resource type="Texture2D" uid="uid://dofcqqd5bbthb" path="res://Assets/Pngs/Button_normal1.png" id="2_vmr3b"]
+[ext_resource type="Texture2D" uid="uid://dei4o3uehtrm5" path="res://Assets/Pngs/Button_hovered.png" id="3_cdcgc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cdcgc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vmr3b"]
+texture = ExtResource("3_cdcgc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ensqh"]
+texture = ExtResource("3_cdcgc")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cdcgc"]
+texture = ExtResource("2_vmr3b")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmr3b"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kq84p"]
+texture = ExtResource("3_cdcgc")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ensqh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lpgi2"]
+texture = ExtResource("3_cdcgc")
+
+[node name="Choice_Type" type="CanvasLayer"]
+script = ExtResource("1_cdcgc")
+
+[node name="TextBoxContainer" type="MarginContainer" parent="."]
+offset_left = 143.0
+offset_top = 98.0
+offset_right = 221.0
+offset_bottom = 131.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="NinePatchRect" parent="TextBoxContainer"]
+layout_mode = 2
+texture = ExtResource("1_4xi2g")
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 2
+theme_override_constants/margin_bottom = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="Button" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cdcgc")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ensqh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "First choice"
+alignment = 0
+
+[node name="Button2" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vmr3b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kq84p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Second choice"
+alignment = 0
+
+[node name="Button3" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Third choice"
+alignment = 0
+
+[node name="Button4" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Fourth choice"
+alignment = 0
+
+[node name="Button5" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Fifth choice"
+alignment = 0
+
+[node name="Button6" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Sixth choice"
+alignment = 0
+
+[node name="Button7" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Seventh choice"
+alignment = 0
+
+[node name="Button8" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Eighth choice"
+alignment = 0
+
+[node name="Button9" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Nineth choice"
+alignment = 0
+
+[node name="Button10" type="Button" parent="TextBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_1m5ob")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ensqh")
+theme_override_styles/hover = SubResource("StyleBoxTexture_vmr3b")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_lpgi2")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cdcgc")
+text = "Tenth choice"
+alignment = 0

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://fljdefee0ina"]
+
+[ext_resource type="Script" uid="uid://g55diglc1wfj" path="res://Scripts/test_script.gd" id="1_3dogw"]
+[ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="2_r5l72"]
+[ext_resource type="PackedScene" uid="uid://b7jcsftsbwyt3" path="res://Scenes/choice_type.tscn" id="3_2wvsv"]
+
+[node name="Trait_Selection_Screen" type="Node2D"]
+script = ExtResource("1_3dogw")
+
+[node name="Backgorund" type="TextureRect" parent="."]
+offset_right = 320.0
+offset_bottom = 180.0
+texture = ExtResource("2_r5l72")
+
+[node name="Choice_Type" parent="." instance=ExtResource("3_2wvsv")]
