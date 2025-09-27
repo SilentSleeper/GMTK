@@ -5,7 +5,7 @@
 
 [node name="Castle" instance=ExtResource("1_r1mkv")]
 description = "The Castle"
-targetScene = "uid://da7d7opge3p6r"
+targetScene = "uid://cnd2artnafrx6"
 
 [node name="Location_Texture" parent="." index="0"]
 texture = ExtResource("2_p6e6l")

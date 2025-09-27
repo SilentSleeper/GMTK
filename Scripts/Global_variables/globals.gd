@@ -52,9 +52,11 @@ var Passives = [
 	"Enua's Blessing"
 ]
 
+## Collection of items that the player character can wear.
 var wearableItems = [
 	"Regalia"
 ]
+
 
 var Items = [
 	"Tar-skin Oil",

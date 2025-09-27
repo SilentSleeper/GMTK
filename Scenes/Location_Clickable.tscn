@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c27aw3b70omj3"]
+[gd_scene load_steps=7 format=3 uid="uid://c27aw3b70omj3"]
 
 [ext_resource type="Script" uid="uid://do8ef6tvqgrcj" path="res://Scripts/location_clickable.gd" id="1_uee5o"]
 [ext_resource type="PackedScene" uid="uid://bnds07vngyg4e" path="res://Scenes/text_box.tscn" id="2_22f0b"]
+[ext_resource type="Script" uid="uid://bxolm61a5vnvm" path="res://Scripts/scene_changer.gd" id="3_xhxq3"]
 
 [sub_resource type="Animation" id="Animation_8hnfc"]
 length = 0.001
@@ -54,3 +55,7 @@ libraries = {
 [node name="Text_Box" parent="." instance=ExtResource("2_22f0b")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+
+[node name="Scene_changer" type="Node" parent="."]
+script = ExtResource("3_xhxq3")
+metadata/_custom_type_script = "uid://bxolm61a5vnvm"

@@ -2,7 +2,10 @@ extends Area2D
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @export var description : String
 @onready var textBox: CanvasLayer = $Text_Box
-@export_file("*.tscn") var targetScene = "<Select target>"
+@onready var sceneChanger: Scene_changer = $Scene_changer
+
+@export_file("*.tscn") var targetScene: String = "<Select target>"
+
 var cursorLocation = "down" # bottom quarter of the screen or not
 var isInside = false
 func _ready() -> void:
@@ -15,22 +18,16 @@ func _on_mouse_entered():
 	animationPlayer.play("scaleAnim")
 	textBox.add_text(description)
 	
-	
 func _on_mouse_exited():
 	isInside = false
 	animationPlayer.play_backwards("scaleAnim")
 	textBox.hide_container()
-	#move_down()
-	
-	
-func change_scene(target: String, viewport: Node):
-	viewport.get_tree().change_scene_to_file(target)
 
 func _input_event(viewport: Node, event: InputEvent, _shape_idx: int):
 	if event is InputEventMouseButton and event.pressed:
 		match event.button_index:
 			MOUSE_BUTTON_LEFT:
-				change_scene(targetScene, viewport)
+				sceneChanger.change_scene(targetScene, viewport)
 
 func move_down():
 	textBox.transform.origin = Vector2(0, 0)

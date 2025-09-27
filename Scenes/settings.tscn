@@ -11,3 +11,4 @@ texture_normal = ExtResource("1_4geyq")
 script = ExtResource("2_i44u3")
 
 [node name="Pause_menu" parent="." instance=ExtResource("3_lhmql")]
+visible = false

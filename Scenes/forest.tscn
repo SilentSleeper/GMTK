@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cahvd8exet8mu" path="res://Assets/Pngs/forest.png" id="2_t7h48"]
 
 [node name="Forest" instance=ExtResource("1_t7h48")]
-targetScene = "res://Scenes/local_map.tscn"
+targetScene = "uid://iyilf4mcc5wj"
 
 [node name="Location_Texture" parent="." index="0"]
 texture = ExtResource("2_t7h48")
