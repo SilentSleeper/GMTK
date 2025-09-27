@@ -19,7 +19,7 @@ func _on_mouse_exited():
 	isInside = false
 	tooltip2.hide_container()
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	mousePos = get_global_mouse_position()
 	if mousePos.y > 105 :
 		offsetY = -80

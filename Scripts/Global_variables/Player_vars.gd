@@ -22,10 +22,17 @@ var Traits = {
 
 var Inventory: Dictionary[String, int] = {} 
 
+var locationStack: Array[PackedScene]
 
+func initCharacter(
+	Upbringing: String = "", 
+	Personality: String = "", 
+	Profession: String = "", 
+	Passives: Array[String] = [], 
+	WornItems: Array[String] = [], 
+	inventoryItems: Array[String] = []
+) -> void:
 
-func initTraits(Upbringing: String = "", Personality: String = "", Profession: String = "", 
-Passives: Array[String] = [], WornItems: Array[String] = []) -> void:
 	for i in Traits:
 		Traits[i] = null
 	
@@ -43,9 +50,14 @@ Passives: Array[String] = [], WornItems: Array[String] = []) -> void:
 		assert(Global.Passives.has(i), "One or more invalid Passives in constructor")
 	Traits["Passives"] = Passives
 	
-	for i in WornItems:
-		assert(Global.wearableItems.has(i), "One or more invalid Worn Items in constructor")
-	Traits["WornItems"] = WornItems
+	if not WornItems.is_empty():
+		for i in WornItems:
+			assert(Global.wearableItems.has(i), "One or more invalid Worn Items in constructor")
+		Traits["WornItems"] = WornItems
+	
+	if not inventoryItems.is_empty():
+		for i in inventoryItems:
+			addItem(i)
 	trait_changed.emit()
 
 func addItem(itemArg: String, Amount := 1):
@@ -54,5 +66,15 @@ func addItem(itemArg: String, Amount := 1):
 		Inventory[itemArg] += Amount
 	else:
 		Inventory.set(itemArg, Amount)
-	
+
+func _input(event: InputEvent) -> void:
+	#TODO: Functionalitate de revenire la scena anterioara pe o tasta (momentan b)
+	if event is InputEventKey and event.is_pressed():
+		match event.keycode:
+			KEY_B:
+				Player.locationStack.pop_back()
+				print(Player.locationStack.size())
+				get_viewport()\
+				.get_tree()\
+				.change_scene_to_packed(Player.locationStack[Player.locationStack.size() - 1])
 	
