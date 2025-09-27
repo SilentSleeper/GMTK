@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://fljdefee0ina"]
+[gd_scene load_steps=10 format=3 uid="uid://fljdefee0ina"]
 
 [ext_resource type="Script" uid="uid://g55diglc1wfj" path="res://Scripts/test_script.gd" id="1_3dogw"]
 [ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="2_r5l72"]
@@ -6,6 +6,42 @@
 [ext_resource type="Texture2D" uid="uid://dh2gd205ivyqv" path="res://Assets/Pngs/ToolTip.png" id="4_cffp3"]
 [ext_resource type="Script" uid="uid://iqmkd0uhiwqv" path="res://Scripts/FileReader.gd" id="5_2jkqx"]
 [ext_resource type="FontFile" uid="uid://b8sy4c575mtef" path="res://Fonts/BoldLCD.ttf" id="5_s3g7h"]
+
+[sub_resource type="Animation" id="Animation_s3g7h"]
+resource_name = "text_show"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextBox/TextBoxContainer/NinePatchRect/MarginContainer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_sxveq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TextBox/TextBoxContainer/NinePatchRect/MarginContainer/RichTextLabel:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tix2j"]
+_data = {
+&"RESET": SubResource("Animation_sxveq"),
+&"text_show": SubResource("Animation_s3g7h")
+}
 
 [node name="Trait_Selection_Screen" type="Node2D"]
 script = ExtResource("1_3dogw")
@@ -45,10 +81,19 @@ theme_override_constants/margin_bottom = 4
 [node name="RichTextLabel" type="RichTextLabel" parent="TextBox/TextBoxContainer/NinePatchRect/MarginContainer"]
 layout_mode = 2
 theme_override_fonts/normal_font = ExtResource("5_s3g7h")
+text = "Halabalu"
 fit_content = true
 scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
 
 [node name="FileReader" type="Node" parent="."]
 script = ExtResource("5_2jkqx")
 File = "res://Data/Dialogue/Test_Story.txt"
 metadata/_custom_type_script = "uid://iqmkd0uhiwqv"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_tix2j")
+}
+autoplay = "text_show"

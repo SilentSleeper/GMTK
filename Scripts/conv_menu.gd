@@ -2,7 +2,7 @@ extends Node2D
 @onready var richTextLabel: RichTextLabel = $RichTextLabel
 @onready var vBoxContainer: VBoxContainer = $VBoxContainer
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
-
+@onready var file_reader: FileReader = $FileReader
 @export_file var TargetCharacter = "<Select target>"
 @export_file var TargetDialogueFile = "<Select target>"
 @export var dialogueSpeed = 25.0
@@ -11,9 +11,6 @@ var isTalking: bool
 var Dialogue: PackedStringArray
 var speechIndex = 0
 
-func Load(Target: String) -> PackedStringArray:
-	var file = FileAccess.open(Target, FileAccess.READ)
-	return file.get_as_text().split(">", false)
 
 func _ready() -> void:
 	# visibility needs to be applied in ready and process, to make sure text doesn't flash on
@@ -23,7 +20,7 @@ func _ready() -> void:
 	richTextLabel.visible = isTalking
 	vBoxContainer.visible = not isTalking
 	
-	Dialogue = Load(TargetDialogueFile)
+	Dialogue = file_reader.Load()
 	assert(!Dialogue.is_empty(), "No dialogue was loaded!")
 
 func Speak(content: PackedStringArray):
