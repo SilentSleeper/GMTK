@@ -3,6 +3,9 @@ class_name test_script extends Node2D
 signal tratits_selected
 
 @onready var choice_type: CanvasLayer = $Choice_Type
+@onready var fileReader: FileReader = $FileReader
+@onready var label: RichTextLabel = $TextBox/TextBoxContainer/NinePatchRect/MarginContainer/RichTextLabel
+
 
 var Upbringing : String = ""
 var Personality : String = ""
@@ -18,6 +21,7 @@ func _ready() -> void:
 	choice_type.choice_3.connect(ChoiceSelected)
 	tratits_selected.connect(addTraits)
 	Player.trait_changed.connect(_selected_traits)
+	label.text = fileReader.Load()[0]
 
 func _selected_traits():
 	print(Player.Traits)
