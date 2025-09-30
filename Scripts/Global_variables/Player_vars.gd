@@ -4,7 +4,7 @@ extends Node
 ## Contains data referring to the current player instance, such as stats, traits and inventory.
 ## Also contains methods for the handling of said data.
 
-signal trait_changed
+signal traits_changed
 
 var Generations: int = 12
 var Health: int = 100
@@ -58,7 +58,7 @@ func initCharacter(
 	if not inventoryItems.is_empty():
 		for i in inventoryItems:
 			addItem(i)
-	trait_changed.emit()
+	traits_changed.emit()
 
 func addItem(itemArg: String, Amount := 1):
 	assert(Global.Items.has(itemArg), "Invalid item tried to be added")
@@ -74,7 +74,5 @@ func _input(event: InputEvent) -> void:
 			KEY_B:
 				Player.locationStack.pop_back()
 				print(Player.locationStack.size())
-				get_viewport()\
-				.get_tree()\
-				.change_scene_to_packed(Player.locationStack[Player.locationStack.size() - 1])
+				get_tree().change_scene_to_packed(Player.locationStack[Player.locationStack.size() - 1])
 	

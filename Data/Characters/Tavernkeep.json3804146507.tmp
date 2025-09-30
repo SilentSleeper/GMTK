@@ -1,0 +1,21 @@
+{
+	"name": "Tavernkeep",
+	"Dialogue":{
+		"firstMeeting": "Vai dar ce domn respectabil la mine in crasma",
+		"generic":[
+			"Ce-ti dau cumetre?",
+			"Ba ej nebun, ce sabie are asta"
+		],
+		
+		"wayfarer":[
+			"Vezi ca nespalati nu primesc"
+		],
+		
+		"mage":[
+			"Ooo, domn patron la magie, sa traim"
+		]
+	},
+	"itemsForSale":{
+		"Ale": 6
+	}
+}

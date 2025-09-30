@@ -50,5 +50,5 @@ scroll_active = false
 
 [node name="FileReader" type="Node" parent="."]
 script = ExtResource("5_2jkqx")
-File = "res://Data/Dialogue/Test_Story.txt"
+File = "res://Data/Characters/Tavernkeep.json"
 metadata/_custom_type_script = "uid://iqmkd0uhiwqv"

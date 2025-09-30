@@ -16,12 +16,13 @@ var Items : Array[String] = []
 var isFirstTime = false
 
 func _ready() -> void:
-	choice_type.choice_1.connect(ChoiceSelected)
-	choice_type.choice_2.connect(ChoiceSelected)
-	choice_type.choice_3.connect(ChoiceSelected)
-	tratits_selected.connect(addTraits)
-	Player.trait_changed.connect(_selected_traits)
-	label.text = fileReader.Load()[0]
+	#choice_type.choice_1.connect(ChoiceSelected)
+	#choice_type.choice_2.connect(ChoiceSelected)
+	#choice_type.choice_3.connect(ChoiceSelected)
+	#tratits_selected.connect(addTraits)
+	#Player.trait_changed.connect(_selected_traits)
+	#label.text = fileReader.Load()[0]
+	fileReader.LoadJson()
 
 func _selected_traits():
 	print(Player.Traits)

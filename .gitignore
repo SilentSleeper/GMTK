@@ -2,6 +2,5 @@
 .godot/
 .gitignore
 /android/
-Scenes/Test_scene
-Scripts/test_script
-
+.editor_settings-*.cfg
+.editor_settings-*.tres
