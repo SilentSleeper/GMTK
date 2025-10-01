@@ -1,5 +1,5 @@
 {
-	"name": "Tavernkeep",
+	"Name": "Tavernkeep",
 	"Dialogue":{
 		"firstMeeting": "Vai dar ce domn respectabil la mine in crasma",
 		"generic":[
@@ -17,5 +17,5 @@
 	},
 	"itemsForSale":{
 		"Ale": 6
-	}
+	},
 }

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="2_r5l72"]
 [ext_resource type="PackedScene" uid="uid://b7jcsftsbwyt3" path="res://Scenes/choice_type.tscn" id="3_2wvsv"]
 [ext_resource type="Texture2D" uid="uid://dh2gd205ivyqv" path="res://Assets/Pngs/ToolTip.png" id="4_cffp3"]
-[ext_resource type="Script" uid="uid://iqmkd0uhiwqv" path="res://Scripts/FileReader.gd" id="5_2jkqx"]
+[ext_resource type="Script" uid="uid://iqmkd0uhiwqv" path="res://Scripts/file_reader.gd" id="5_2jkqx"]
 [ext_resource type="FontFile" uid="uid://b8sy4c575mtef" path="res://Fonts/BoldLCD.ttf" id="5_s3g7h"]
 
 [node name="Trait_Selection_Screen" type="Node2D"]

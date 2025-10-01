@@ -2,7 +2,7 @@ extends Area2D
 @onready var animationPlayer: AnimationPlayer = $AnimationPlayer
 @export var description : String
 @onready var textBox: CanvasLayer = $Text_Box
-@onready var sceneChanger: Scene_changer = $Scene_changer
+@onready var sceneChanger: SceneChanger = $Scene_changer
 
 @export_file("*.tscn") var targetScene: String = "<Select target>"
 

@@ -22,7 +22,9 @@ func _ready() -> void:
 	#tratits_selected.connect(addTraits)
 	#Player.trait_changed.connect(_selected_traits)
 	#label.text = fileReader.Load()[0]
-	fileReader.LoadJson()
+	var plm = fileReader.LoadJson()
+	var sal = fileReader.Extract(plm, "Mage")
+	print(sal)
 
 func _selected_traits():
 	print(Player.Traits)

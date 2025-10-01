@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://hy2hla3whkq8"]
+[gd_scene load_steps=8 format=3 uid="uid://hy2hla3whkq8"]
 
 [ext_resource type="Script" uid="uid://dtqinlrbfbhk" path="res://Scripts/conv_menu.gd" id="1_w57kf"]
 [ext_resource type="Texture2D" uid="uid://biewu577waocr" path="res://Assets/Pngs/Background.png" id="2_ejib7"]
 [ext_resource type="PackedScene" uid="uid://bd5usr4f6axc5" path="res://Scenes/side_panel.tscn" id="3_ejib7"]
+[ext_resource type="Script" uid="uid://iqmkd0uhiwqv" path="res://Scripts/file_reader.gd" id="4_16f2p"]
 
 [sub_resource type="Animation" id="Animation_16f2p"]
 length = 0.001
@@ -84,3 +85,7 @@ offset_bottom = 176.0
 alignment = 1
 
 [node name="Side_Panel" parent="." instance=ExtResource("3_ejib7")]
+
+[node name="FileReader" type="Node" parent="."]
+script = ExtResource("4_16f2p")
+metadata/_custom_type_script = "uid://iqmkd0uhiwqv"
