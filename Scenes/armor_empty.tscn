@@ -3,6 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://dsfrhu6rn7sdc" path="res://Scenes/hoverable.tscn" id="1_86ttx"]
 [ext_resource type="Texture2D" uid="uid://vhbbtre6l64f" path="res://Assets/Pngs/Armor.png" id="2_p51xn"]
 
-[node name="No Equpiment" instance=ExtResource("1_86ttx")]
+[node name="No Equipment" instance=ExtResource("1_86ttx")]
 texture_normal = ExtResource("2_p51xn")
 description = "Here I could wear something. Blud would the sexiest knight in the whole Kingdom if he would wear smth, fr"

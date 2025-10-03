@@ -74,7 +74,5 @@ func _input(event: InputEvent) -> void:
 			KEY_B:
 				Player.locationStack.pop_back()
 				print(Player.locationStack.size())
-				get_viewport()\
-				.get_tree()\
-				.change_scene_to_packed(Player.locationStack[Player.locationStack.size() - 1])
+				get_tree().change_scene_to_packed(Player.locationStack[Player.locationStack.size() - 1])
 	

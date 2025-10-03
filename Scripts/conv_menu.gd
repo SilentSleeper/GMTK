@@ -2,16 +2,13 @@ extends Node2D
 @onready var richTextLabel: RichTextLabel = $RichTextLabel
 @onready var vBoxContainer: VBoxContainer = $VBoxContainer
 @onready var animPlayer: AnimationPlayer = $AnimationPlayer
-@onready var file_reader: FileReader = $FileReader
+@onready var fileReader: FileReader = $FileReader
 @export_file var TargetCharacter = "<Select target>"
-@export_file var TargetDialogueFile = "<Select target>"
 @export var dialogueSpeed = 25.0
 
 var isTalking: bool
 var Dialogue: PackedStringArray
 var speechIndex = 0
-
-
 func _ready() -> void:
 	# visibility needs to be applied in ready and process, to make sure text doesn't flash on
 	# screen during scene change.
@@ -19,10 +16,10 @@ func _ready() -> void:
 	# the ready function visibility modifiers should be removed.
 	richTextLabel.visible = isTalking
 	vBoxContainer.visible = not isTalking
-	
-	Dialogue = file_reader.Load()
-	assert(!Dialogue.is_empty(), "No dialogue was loaded!")
+	var fileContent = fileReader.LoadJson()
+	#Dialogue = extractDialogue(fileContent, "generic")
 
+	
 func Speak(content: PackedStringArray):
 	if speechIndex >= content.size():
 		return

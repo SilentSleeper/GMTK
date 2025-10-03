@@ -10,4 +10,4 @@ targetScene = "uid://iyilf4mcc5wj"
 texture = ExtResource("2_t7h48")
 
 [node name="CollisionPolygon2D" parent="." index="3"]
-polygon = PackedVector2Array(-69, 1, -47, -5, -36, -22, -9, -31, 58, -15, 64, -33, 75, -13, 59, 26, 47, 32, -72, 31)
+polygon = PackedVector2Array(-69, 1, -49, -1, -36, -22, -9, -31, 58, -15, 64, -33, 75, -13, 59, 26, 48, 31, -72, 31)
