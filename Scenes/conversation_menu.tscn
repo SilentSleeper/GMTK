@@ -44,7 +44,6 @@ _data = {
 [node name="Conv_menu" type="Node2D"]
 editor_description = "Conversation menu - appears after pressing \"Talk\" or similar in the interaction menu."
 script = ExtResource("1_w57kf")
-TargetDialogueFile = "res://Data/Dialogue/Test_dialogue.txt"
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 320.0

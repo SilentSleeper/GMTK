@@ -1,0 +1,10 @@
+{
+	"name" : "TraitStory",
+	"Dialogue" : {
+		"first" : ["First trait selection choice var1", "First trait selection choice var2", "First trait selection choice var3"],
+		"second" : ["Second trait selection choice var1", "Second trait selection choice var2", "Second trait selection choice var3"],
+		"third" : ["Third trait selection choice var1", "Third trait selection choice var2", "Third trait selection choice var3"],
+		"fourth" : ["Fourth trait selection choice var1", "Fourth trait selection choice var2", "Fourth trait selection choice var3"],
+		"fifth" : ["Fifth trait selection choice var1", "Fifth trait selection choice var2", "Fifth trait selection choice var3"],
+	}
+}
