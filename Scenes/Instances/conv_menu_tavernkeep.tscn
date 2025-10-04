@@ -3,6 +3,3 @@
 [ext_resource type="PackedScene" uid="uid://hy2hla3whkq8" path="res://Scenes/conversation_menu.tscn" id="1_kxjpd"]
 
 [node name="Conv_menu_tavernkeep" instance=ExtResource("1_kxjpd")]
-
-[node name="FileReader" parent="." index="6"]
-File = "res://Data/Characters/Tavernkeep.json"

@@ -17,7 +17,8 @@ func generateJsonError(json: JSON) -> String:
 	return "JSON Parse ERROR: " + json.get_error_message() + " in " + File\
 	+ " at line " + str(json.get_error_line())
 
-## Recursively finds target string array in dictionary
+## Recursively finds the string array with specified name in a dictionary
+## 
 func Extract(dict: Dictionary, target: String) -> PackedStringArray:
 	for i in dict:
 		if i.to_lower() == target.to_lower():

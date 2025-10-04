@@ -87,4 +87,7 @@ alignment = 1
 
 [node name="FileReader" type="Node" parent="."]
 script = ExtResource("4_16f2p")
+File = "res://Data/Characters/Tavernkeep.json"
 metadata/_custom_type_script = "uid://iqmkd0uhiwqv"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_finished"]

@@ -16,6 +16,12 @@ var worldFlags = {
 	"discoveredSprings": false
 }
 
+var metNPCs = {
+	"King": false,
+	"Tavernkeep": false,
+	"Witch": false
+}
+
 # Trait and item collections
 
 var poorStartMoney = 10

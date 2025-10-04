@@ -9,6 +9,7 @@ extends Node2D
 var isTalking: bool
 var Dialogue: PackedStringArray
 var speechIndex = 0
+
 func _ready() -> void:
 	# visibility needs to be applied in ready and process, to make sure text doesn't flash on
 	# screen during scene change.
@@ -17,24 +18,35 @@ func _ready() -> void:
 	richTextLabel.visible = isTalking
 	vBoxContainer.visible = not isTalking
 	var fileContent = fileReader.LoadJson()
-	#Dialogue = extractDialogue(fileContent, "generic")
-
 	
+	var characterName = fileReader.Extract(fileContent, "Name")
+	if Global.metNPCs[characterName[0]] == false:
+		# HACK: indexarea asta la 0 e goofy dar e necesara fiindca 
+		# se returneaza un array in characterName
+		Dialogue = fileReader.Extract(fileContent, "firstMeeting")
+		
+	Dialogue.append_array(fileReader.Extract(fileContent, "generic"))
+	showNextLine(Dialogue)
+
+# TODO: Implementeaza o modalitate de a extrage un singur string aleator din content
+# in loc de a derula intregul array
+
 func Speak(content: PackedStringArray):
+	if Input.is_action_just_pressed("Continue"):
+		if animPlayer.is_playing():
+			# Jump to the end of the animation 
+			animPlayer.seek(animPlayer.get_animation(animPlayer.current_animation).length, true)
+		else: 
+			showNextLine(content)
+
+func showNextLine(content: PackedStringArray):
 	if speechIndex >= content.size():
 		return
 	richTextLabel.text = content[speechIndex]
 	animPlayer.speed_scale = dialogueSpeed / richTextLabel.text.length()
-	
-	if Input.is_action_just_pressed("Continue"):
-		if animPlayer.is_playing(): 
-			animPlayer.seek(animPlayer.get_animation(animPlayer.current_animation).length, true)
-		else:
-			animPlayer.play()
-			speechIndex += 1
-	
-	# FIXME: Ultimul element de dialog apare de doua ori la rand
-	
+	animPlayer.play()
+	speechIndex += 1
+
 func _process(_delta: float) -> void:
 	richTextLabel.visible = isTalking
 	vBoxContainer.visible = not isTalking

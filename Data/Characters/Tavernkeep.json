@@ -1,7 +1,16 @@
 {
-	"Name": "Tavernkeep",
+	"Name": ["Tavernkeep"],
 	"Dialogue":{
-		"firstMeeting": "Vai dar ce domn respectabil la mine in crasma",
+		"test":[
+			"This is just a test of multiple dialogue lines",
+			"You know, for good development reasons",
+			"Because we are good developers"
+		],
+		
+		"firstMeeting": [
+			"Vai dar ce domn respectabil la mine in crasma"
+		],
+
 		"generic":[
 			"Ce-ti dau cumetre?",
 			"Ba ej nebun, ce sabie are asta"
